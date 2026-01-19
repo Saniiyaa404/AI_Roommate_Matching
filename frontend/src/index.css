@@ -2,24 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Base Colors - Dark Theme (Deep Blue/Purple) */
-  --background: 240 25% 10%;      /* #131320 - Very dark background */
-  --sidebar-bg: 240 24% 12%;      /* #171826 - Sidebar specific */
-  --card-bg: 242 20% 16%;         /* #212231 - Cards/Panels */
-  --card-hover: 242 20% 20%;      /* Slightly lighter for hover */
-  
-  --primary: 255 70% 65%;         /* #9D74F6 - The main purple accent */
-  --primary-foreground: 0 0% 100%;
-  
-  --text-main: 240 10% 95%;       /* White-ish text */
-  --text-muted: 240 10% 60%;      /* Gray text */
-  
-  --border: 240 20% 20%;          /* Border lines */
+@layer base {
+  :root {
+    --background: 240 25% 10%;
+    --sidebar-bg: 240 24% 12%;
+    --card-bg: 242 20% 16%;
+    --card-hover: 242 20% 20%;
+
+    --primary: 255 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --text-main: 240 10% 95%;
+    --text-muted: 240 10% 60%;
+
+    --border: 240 20% 20%;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--text-main));
+  }
 }
 
-/* Helper utility for the circular progress bar */
+/* Progress ring */
 .progress-circle {
-  background: conic-gradient(hsl(var(--primary)) var(--percentage), transparent 0);
+  background: conic-gradient(
+    hsl(var(--primary)) var(--percentage),
+    transparent 0
+  );
   border-radius: 50%;
 }
