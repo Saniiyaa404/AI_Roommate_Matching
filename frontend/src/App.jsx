@@ -3,6 +3,7 @@ import React from "react"
 import {Routes, Route} from "react-router-dom"
 import StudentDashboard from "./pages/StudentDashboard";
 import FindRoommates from "./pages/FindRoommates";
+import ProfileSetupWizard from "./pages/ProfileSetupWizard"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<StudentDashboard />} />
           <Route path="/auth" element={<AuthPage />} />
+          <Route path="/profile-setup" element={<ProfileSetupWizard />} />
           <Route path="/find-roommates" element={<FindRoommates />} />
           <Route path="*" element={<div>404 Not found </div>} />
         </Routes>

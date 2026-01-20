@@ -2,33 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 240 25% 10%;
-    --sidebar-bg: 240 24% 12%;
-    --card-bg: 242 20% 16%;
-    --card-hover: 242 20% 20%;
+:root {
+  /* Dark Theme Colors */
+  --bg-primary: #0f1016;       /* Deep dark background */
+  --bg-secondary: #181a25;     /* Card background */
+  --bg-tertiary: #222533;      /* Inputs/Inactive states */
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;   /* Slate-400 */
+  --text-muted: #64748b;       /* Slate-500 */
 
-    --primary: 255 70% 65%;
-    --primary-foreground: 0 0% 100%;
+  /* Accents (Purple/Indigo) */
+  --accent-primary: #6366f1;   
+  --accent-secondary: #8b5cf6; 
+  --accent-gradient-start: #4f46e5;
+  --accent-gradient-end: #9333ea;
 
-    --text-main: 240 10% 95%;
-    --text-muted: 240 10% 60%;
-
-    --border: 240 20% 20%;
-  }
-
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--text-main));
-  }
+  /* Status */
+  --success: #10b981;          /* Emerald Green */
 }
 
-/* Progress ring */
-.progress-circle {
-  background: conic-gradient(
-    hsl(var(--primary)) var(--percentage),
-    transparent 0
-  );
-  border-radius: 50%;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif; /* Optional: Ensure you have a nice font */
 }
